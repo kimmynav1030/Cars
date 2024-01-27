@@ -1,0 +1,36 @@
+from google.colab import files
+
+uploaded = files.upload()
+
+"""### III. The Sharpe Ratio
+
+Professor William Sharpe developed the *Capital Asset Pricing Model* (CAPM) at the University of Washington in the early 1960s. Dr. Sharpe later moved to Stanford and won the 1990 Nobel Prize in Economics for his work on the CAPM. The CAPM describes how a well-diversified portfolio of assets has a better risk-to-reward ratio than a portfolio is not well-diversified. A consequence of the CAPM is the ex post <u>Sharpe Ratio</u>:
+
+$ S = \frac{R_p - R_f}{\sigma_p}$,
+
+which in its simplest form is a ratio of a portfolio's excess return over the risk in the portfolio.
+
+**Exercise 7**. An investor prefers a portfolio with a Sharpe Ratio that is $\_\_\_\_\_$(large, small)?
+
+Suppose that our "portfolio" consists of 2 things: shares of stock A and shares of stock B. Let $x$ be the amount of money invested in stock A, and $y$ be the amount invested in stock B. Let $R_a$ be the return (percentage that the stock price changes) on shares of stock A, $R_b$ be the return on shares of stock B. Let's *normalize* our investment budget: $x + y = \$1$ so that $x$ and $y$ can be interpreted as percentages.
+
+For example, if $x = 0.35$, then $y = 0.65$, which means that an investor put $35\%$ of their money in Stock A and $0.65\%$ in stock B ($0.35 + 0.65 = 1$).  
+
+Thus our portfolio's *excess return* (how well the investments do compared to the alternative of just investing in the risk-free alternative) is:
+
+$ R_p - R_f  = xR_a + yR_b - R_f$.
+
+The Sharpe Ratio becomes:
+
+$ S = \frac{xR_a + yR_b - R_f}{\sqrt{\sigma_a^2x^2 + \sigma_b^2y^2 +\rho\sigma_a\sigma_bxy}}.$
+
+### IV. Optimizing the Sharpe Ratio.
+
+**Question**. Optimization involves choosing the correct (optimal) amount of the things that you control. What are the inputs for $S$ that the investor is able to make a choice about?
+
+**Exercise 8**. Use Wolfram Alpha (https://www.wolframalpha.com/) or whatever graphing device you prefer to plot the Sharpe Ratio for $\sigma_a = \sigma_b = 0.05$, $R_a = 0.1 = R_b = 0.10$, $\rho = 1$, $R_f = .02$. By looking at the graph you estimate that $S$ achieves its maximum around $x = \_\_\_\_$.  Hint: you need to get rid of $y$ so $S$ is a function of only $x$. How can you replace $y$ with things involving only $x$?
+
+For this scenario the maximum Sharpe Ratio is achieved by investing \_\_\_% of your funds in stock A and \_\_\_% of your funds in stock B.
+
+**Exercise 9**. The Python function ```Sharpe_Ratio``` uses a "helper" function ```data_func``` to calculate the $\sigma_a$, $\sigma_b$, $R_a$, $R_b$ and $\rho$ from a data set of 20 stocks. This data is then used by the```Sharpe_Ratio``` function to calculate $x$ and $y$ (```x_optimal``` and ```y_optimal```) and return the optimal Sharpe Ratio ```S_max```. Finish ```Sharpe_Ratio``` by filling in the missing line of code below. Hint: How did you find the amount to invest in stock B in the previous exercise?
+"""
