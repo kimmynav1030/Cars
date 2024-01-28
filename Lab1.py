@@ -1,1 +1,0 @@
-d = { "MERC":1, "XOM":0, "BHP":2, "ORCL":3, "WMT":4, "PEP":5, "V":6, "LVS":7, "CI":8, "COP":9, "URI":10, "TMUS":11, "MRO":12, "SLB":13, "AVGO":14, "CHV":15, "MMM":16, "MSFT":17, "META":18, "BOE":19 }
