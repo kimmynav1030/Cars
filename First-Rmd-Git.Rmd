@@ -37,4 +37,3 @@ g + geom_col(aes(x = cty, y = manufacturer, fill = manufacturer)) +
   ggtitle("Average Miles per Gallon for City Driving by Manufacturer", subtitle = "Data on vehicles from 1999 to 2008 for popular models of cars") +
   theme(legend.position="none") 
 ```
-
