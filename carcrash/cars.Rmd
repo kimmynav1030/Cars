@@ -1,0 +1,8 @@
+# R program to read a csv file
+ 
+# Get content into a data frame
+data <- read.csv("car.csv",
+                header = FALSE, sep = "\t")
+     
+# Printing content of Text File
+print(data)
